@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-13T11:28:08 IST" name="Default suite" finished-at="2024-11-13T11:28:15 IST" duration-ms="6517">
+  <suite started-at="2024-11-20T14:47:11 IST" name="Default suite" finished-at="2024-11-20T14:47:26 IST" duration-ms="14424">
     <groups>
     </groups>
-    <test started-at="2024-11-13T11:28:08 IST" name="Default test" finished-at="2024-11-13T11:28:15 IST" duration-ms="6517">
-      <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testscript.LoginTest@1ed4ae0f]" started-at="2024-11-13T11:28:08 IST" name="intializeBrowser" finished-at="2024-11-13T11:28:14 IST" duration-ms="5533" status="PASS">
+    <test started-at="2024-11-20T14:47:11 IST" name="Default test" finished-at="2024-11-20T14:47:26 IST" duration-ms="14424">
+      <class name="testscript.ManageNewsTest">
+        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testscript.ManageNewsTest@3e8c3cb]" started-at="2024-11-20T14:47:11 IST" name="intializeBrowser" finished-at="2024-11-20T14:47:15 IST" duration-ms="4158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyTheuserisabletologinusinginvalidcredentials()[pri:0, instance:testscript.LoginTest@1ed4ae0f]" started-at="2024-11-13T11:28:14 IST" name="verifyTheuserisabletologinusinginvalidcredentials" finished-at="2024-11-13T11:28:15 IST" duration-ms="922" status="PASS">
+        <test-method signature="deleteManageNews()[pri:0, instance:testscript.ManageNewsTest@3e8c3cb]" started-at="2024-11-20T14:47:15 IST" name="deleteManageNews" finished-at="2024-11-20T14:47:26 IST" duration-ms="10199" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheuserisabletologinusinginvalidcredentials -->
-        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@1ed4ae0f]" started-at="2024-11-13T11:28:15 IST" name="quitAndClose" finished-at="2024-11-13T11:28:15 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- deleteManageNews -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.ManageNewsTest@3e8c3cb]" started-at="2024-11-20T14:47:26 IST" name="quitAndClose" finished-at="2024-11-20T14:47:26 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAndClose -->
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.ManageNewsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

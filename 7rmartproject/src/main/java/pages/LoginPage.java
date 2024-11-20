@@ -13,19 +13,12 @@ public class LoginPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-		/*//@FindBy(xpath="//input[@type='text']")private WebElement usernameField;
-		//WebElement username=driver.findElement(By.xpath("//input[@name='username']"));
-		@FindBy(xpath="//input[@name='username']")private WebElement usernamefield;
-		//WebElement password=driver.findElement(By.name("password"));
-		@FindBy(name="password")private WebElement passwordfield;		
-		//WebElement btnsignin=driver.findElement(By.xpath("//button[@type='submit']"));
-		@FindBy(xpath="//button[@type='submit']")private WebElement btnsignin;		
-		//WebElement dashboardvalue=driver.findElement(By.xpath("//p[text()='Dashboard']"));
-		@FindBy(xpath="//p[text()='Dashboard']")private WebElement dashboardvalue;*/
+		
 	@FindBy(xpath="//input[@name='password']") private WebElement passwordfield;
 	@FindBy(xpath="//input[@name='username']") private WebElement usernamefield;
 	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
-	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") private WebElement alertmsg;
+	//@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") private WebElement alertmsg;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") private WebElement alertmessage;
 	@FindBy(xpath="//p[text()='Dashboard']") private WebElement dashboardvalue;
 		public void enterusernameonusernamefield(String username)
 		{
@@ -45,7 +38,7 @@ public class LoginPage {
 		}
 		public boolean isLoginErrorDisplayed()
 		{
-			return alertmsg.isDisplayed();
+			return alertmessage.isDisplayed();
 		}
 	}
 	
