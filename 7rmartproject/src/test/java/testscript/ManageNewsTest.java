@@ -32,5 +32,23 @@ public class ManageNewsTest extends Base{
 		
 	
 	}
-
+	@Test
+	public void saveNewNews() throws IOException 
+	{
+		
+		String usernamevalue=ExcelUtilities.getStringData(1, 0, "LoginPage");
+		String passwordvalue=ExcelUtilities.getStringData(1, 1,"LoginPage");
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterusernameonusernamefield(usernamevalue);
+		loginpage.enterpasswordonpasswordfield(passwordvalue);
+		loginpage.clicksigninbutton();
+		ManageNewsPage managenews=new ManageNewsPage(driver);
+		managenews.clickManageNewsMoreinfo();
+		managenews.clickNewNewsButton();
+		String newnews="news new";
+		managenews.enterNewNews(newnews);
+		managenews.clickSaveNewsButton();
+		boolean alertmessagedisplayed=managenews.isAlertMessageDisplayed();
+		 Assert.assertTrue(alertmessagedisplayed,"Alert Message not displayed"); 
+	}
 }
