@@ -25,14 +25,14 @@ public class ExcelUtilities {
  		Cell c= r.getCell(j); 
  		return c.getStringCellValue(); 
  	}
-	public static String getIntegerData(int i, int j, String sheet)
+	public static String getIntegerData(int i, int j, String sheet) throws IOException
 	{
 		String filepath=Constants.TESTDATAFILE;
  		f=new FileInputStream(filepath); 
  		wb= new XSSFWorkbook(f); 
  		sh = wb.getSheet(sheet); 	
-		Row r=sh.getRow(a); 
-		Cell c=r.getCell(b); 
+		Row r=sh.getRow(i); 
+		Cell c=r.getCell(j); 
 		int x=(int)c.getNumericCellValue(); 
 		return String.valueOf(x);
 		

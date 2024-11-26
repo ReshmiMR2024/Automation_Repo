@@ -44,6 +44,7 @@ public class AdminUserPage {
 		 usernameinput.sendKeys(username);
 	 }
 	 public void enterPassword(String password)
+	 
 	 {
 		 passwordinput.clear();	    
 		 passwordinput.sendKeys(password);

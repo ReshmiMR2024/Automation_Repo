@@ -17,8 +17,8 @@ public class ManageNewsPage {
 	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
 	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']") private WebElement managenewsmoreinfo;
-	@FindBy(xpath="//tbody/tr[1]/td[2]/a[2]") private WebElement deletemanagenews;	
-	@FindBy(xpath="//i[@class='fas fa-trash-alt']")private WebElement confirmalertbox;
+	@FindBy(xpath="//tbody/tr[1]/td[2]/a[2]") private WebElement deletebuttonmanagenews;	
+	//@FindBy(xpath="//i[@class='fas fa-trash-alt']")private WebElement confirmalertbox;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement deletemessage;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']") private WebElement newnewsbutton;
 	@FindBy(xpath="//textarea[@id='news']") private WebElement newsinputfield;	//
@@ -33,12 +33,12 @@ public class ManageNewsPage {
 	 }
 	 public void clickDeleteButtonManageNews()
 	 {
-		 deletemanagenews.click();
+		 deletebuttonmanagenews.click();
 	 }
 	 public void isConfirmationBoxDisplayed()
 	 {
 		 //confirmalertbox.click();			
-	     driver.switchTo().alert().getText();
+	     driver.switchTo().alert().getText();	     
 		 driver.switchTo().alert().accept();
 	 }
 	 public boolean isAlertMessageDisplayed()
@@ -59,7 +59,7 @@ public class ManageNewsPage {
 	 }
 	 public boolean isSaveMessageDisplayed()
 	 {
-			return savemessage.isDisplayed();
+		return savemessage.isDisplayed();
 	 }
 	
 
