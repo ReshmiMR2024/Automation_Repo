@@ -17,4 +17,8 @@ public static final int ImplicitWait=10;  //applicable to all web elements
 	    wait.until(ExpectedConditions.elementToBeClickable(element));
 
 }
+	public void waitForElement(WebDriver driver, WebElement target) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+		wait.until(ExpectedConditions.visibilityOf(target));
+	}
 }

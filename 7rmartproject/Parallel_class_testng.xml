@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Parallel class Testing" parallel="classes" thread-count="2">
+ <parameter name="browser" value="Chrome"></parameter>
 <listeners>
 <listener class-name="generatereport.Listeners"></listener>
+
 </listeners>
   <test name="test">
     <classes>
@@ -10,15 +12,12 @@
       <methods>
       <include name="verifyTheuserisabletologinusingvalidcredentials"> </include>
         </methods>
-      </class>
-     
+      </class>    
       
      
       <class name="testscript.AdminUserTest">
-     <methods>
-     
-     <include name="updateAdminUser">     </include>
-     
+     <methods>     
+     <include name="updateAdminUser">  </include>     
      </methods>
      </class>
     </classes>

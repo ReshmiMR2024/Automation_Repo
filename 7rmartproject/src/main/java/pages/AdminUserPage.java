@@ -14,9 +14,9 @@ public class AdminUserPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath="//input[@name='password']") private WebElement passwordfield;
-	@FindBy(xpath="//input[@name='username']") private WebElement usernamefield;
-	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
+	//@FindBy(xpath="//input[@name='password']") private WebElement passwordfield;
+	//@FindBy(xpath="//input[@name='username']") private WebElement usernamefield;
+	//@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
 	
 	@FindBy(xpath="//a[text()='More info ']") private WebElement moreinfo;	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10744&page_ad=1']") private WebElement editbutton;
@@ -35,33 +35,31 @@ public class AdminUserPage {
 	}
 	public void editbutton()
 	{
-		
 		editbutton.click();
 	}
-	 public void enterUsername(String username)
-	 {
-		 usernameinput.clear();	    
-		 usernameinput.sendKeys(username);
-	 }
-	 public void enterPassword(String password)
-	 
-	 {
-		 passwordinput.clear();	    
-		 passwordinput.sendKeys(password);
-	 }
+    public void enterUsername(String username)
+	{
+	    usernameinput.clear();	    
+		usernameinput.sendKeys(username);
+	}
+	public void enterPassword(String password)	 
+    {
+		passwordinput.clear();	    
+		passwordinput.sendKeys(password);
+	}
 	 public void selectUsertypeFieldUpdate(String usertype) 
-	 {
-			Select select=new Select(selectusertype);
-			select.selectByValue(usertype);
-	 }
-	 public void clickUpdateButton()
-	 {
-		 updatebutton.click();
-	 }
+	{
+		Select select=new Select(selectusertype);
+		select.selectByValue(usertype);
+	}
+	public void clickUpdateButton()
+	{
+		updatebutton.click();
+	}
 	 public boolean isAlertMessageDisplayed()
-	 {
-			return alertupdatemessage.isDisplayed();
-	 }
+	{
+		return alertupdatemessage.isDisplayed();
+	}
 	
 	 
 	
