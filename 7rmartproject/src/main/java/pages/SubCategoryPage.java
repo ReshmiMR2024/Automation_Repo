@@ -19,11 +19,8 @@ public class SubCategoryPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath="//input[@name='password']") private WebElement passwordfield;
-	@FindBy(xpath="//input[@name='username']") private WebElement usernamefield;
-	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category']") private WebElement moreinfosubcategory;		
+		
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/add']") private WebElement newbuttonsubcategory;	
 	@FindBy(xpath="//select[@id='cat_id']") private WebElement selectcategory;
 	@FindBy(xpath="//input[@id='subcategory']") private WebElement subcategoryinput;
@@ -31,32 +28,30 @@ public class SubCategoryPage {
 	@FindBy(xpath="//button[@type='submit']") private WebElement savebutton;	
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") private WebElement savemessage;
 	
-	
-	
-	
-	
 
-	public void clickmoreinfobutton()
-	{
-		moreinfosubcategory.click();
-	}
-	public void clickNewSubCategorybutton()
+	
+	public SubCategoryPage clickNewSubCategorybutton()
 	{
 		newbuttonsubcategory.click();
+		return this;
 	}
-		public void clickOnCategoryField(String categorydropdown) {
+		public SubCategoryPage clickOnCategoryField(String categorydropdown) {
 		PageUtlities pageutility=new PageUtlities();
 		pageutility.selectByVisibleText(selectcategory, categorydropdown);
+		return this;
 	}
-		public void enterSubcateforyField(String subcategory) {
+		public SubCategoryPage enterSubcateforyField(String subcategory) {
 			subcategoryinput.sendKeys(subcategory);
+			return this;
 		}
-		public void fileUpload() throws AWTException {
+		public SubCategoryPage fileUpload() throws AWTException {
 			FileUploadUtlities fileuploadutilities=new FileUploadUtlities();
-			fileuploadutilities.fileUplaodusingSendKeys(imageuploadbutton, Constants.RICECOOKER_IMAGE);
+			fileuploadutilities.fileUplaodUsingSendKeys(imageuploadbutton, Constants.RICECOOKER_IMAGE);
+			return this;
 		}
-		public void clickOnSavebutton() {
+		public SubCategoryPage clickOnSavebutton() {
 			savebutton.click();
+			return this;
 		}
 		public boolean isAlertMessageDisplayed() {
 			return savemessage.isDisplayed();

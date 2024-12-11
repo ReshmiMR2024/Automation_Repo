@@ -20,17 +20,21 @@ public class LoginPage {
 	//@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") private WebElement alertmsg;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") private WebElement alertmessage;
 	@FindBy(xpath="//p[text()='Dashboard']") private WebElement dashboardvalue;
-		public void enterusernameonusernamefield(String username)
+	
+		public LoginPage enterusernameonusernamefield(String username)
 		{
 			usernamefield.sendKeys(username);
+			return this;
 		}
-		public void enterpasswordonpasswordfield(String password)
+		public LoginPage enterpasswordonpasswordfield(String password)
 		{
 			passwordfield.sendKeys(password);
+			return this;
 		}
-		public void clicksigninbutton()
+		public HomePage clicksigninbutton()
 		{
 			signinbutton.click();
+			return new HomePage(driver);
 		}
 		public boolean isHomepageDisplayed()
 		{

@@ -14,21 +14,18 @@ public class ManageContactPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact']") private WebElement moreinfo;	
+	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/contact/edit_contact?edit=1']") private WebElement editbutton;	
 	@FindBy(xpath="//button[@name='Update']") private WebElement updatebutton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") private WebElement alertmessage;		
 	
-
-	public void clickMoreInfoButton()
-	{
-		moreinfo.click();
-	}
-	public void clickEditButton()
+	
+	public ManageContactPage clickEditButton()
 	{
 		editbutton.click();
+		return this;
 	}
-	 public void isUpdateButtonVisible()
+	 public ManageContactPage isUpdateButtonVisible()
 	 {
 		
 	  if (updatebutton.isDisplayed())
@@ -39,10 +36,12 @@ public class ManageContactPage {
 	   {
          System.out.println("Update button is not displayed.");
        }
+	  return this;
 	 }
-	 public void clickOnUpdateButton()
+	 public ManageContactPage clickOnUpdateButton()
 	 {
 	 updatebutton.click();
+	 return this;
 	 }
 	 public boolean isAlertMessageDisplayed()
 	 {

@@ -12,11 +12,8 @@ public class ManageNewsPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath="//input[@name='password']") private WebElement passwordfield;
-	@FindBy(xpath="//input[@name='username']") private WebElement usernamefield;
-	@FindBy(xpath="//button[@type='submit']") private WebElement signinbutton;
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news']") private WebElement managenewsmoreinfo;
+	
 	@FindBy(xpath="//tbody/tr[1]/td[2]/a[2]") private WebElement deletebuttonmanagenews;	
 	//@FindBy(xpath="//i[@class='fas fa-trash-alt']")private WebElement confirmalertbox;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement deletemessage;
@@ -27,39 +24,42 @@ public class ManageNewsPage {
 	
 	
 			
-	 public void clickManageNewsMoreinfo()
-	 {
-		 managenewsmoreinfo.click();
-	 }
-	 public void clickDeleteButtonManageNews()
+	 
+	 public ManageNewsPage clickDeleteButtonManageNews()
 	 {
 		 deletebuttonmanagenews.click();
+		 return this;
 	 }
-	 public void isConfirmationBoxDisplayed()
+	 public ManageNewsPage isConfirmationBoxDisplayed()
 	 {
 		 //confirmalertbox.click();			
 	     driver.switchTo().alert().getText();	     
 		 driver.switchTo().alert().accept();
+		 return this;
 	 }
 	 public boolean isAlertMessageDisplayed()
 	 {
 			return deletemessage.isDisplayed();
 	 }
-	 public void clickNewNewsButton()
+	 public ManageNewsPage clickNewNewsButton()
 	 {
 		 newnewsbutton.click();
+		 return this;
 	 }
-	 public void enterNewNews(String news)
+	 public ManageNewsPage enterNewNews(String news)
 	 {
 		 newsinputfield.sendKeys(news);
+		 return this;
 	 }
-	 public void clickSaveNewsButton()
+	 public ManageNewsPage clickSaveNewsButton()
 	 {
 		 savenewsbutton.click();
+		 return this;
 	 }
 	 public boolean isSaveMessageDisplayed()
 	 {
 		return savemessage.isDisplayed();
+		
 	 }
 	
 
